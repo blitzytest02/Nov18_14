@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-hello-world-tutorial",
+  "version": "1.0.0",
+  "description": "A minimal Node.js tutorial project with a single /hello endpoint using Express.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "tutorial",
+    "express",
+    "http",
+    "hello-world",
+    "beginner"
+  ],
+  "author": "Tutorial Author",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0 <=20.x"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
