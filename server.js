@@ -9,6 +9,11 @@ app.get('/hello', (req, res) => {
   res.status(200).type('text/plain').send('Hello world');
 });
 
+// 405 handler for non-GET requests to /hello
+app.all('/hello', (req, res) => {
+  res.status(405).set('Allow', 'GET').type('text/plain').send('405 Method Not Allowed');
+});
+
 // 404 handler for undefined routes
 app.use((req, res) => {
   res.status(404).type('text/plain').send('404 Not Found');
