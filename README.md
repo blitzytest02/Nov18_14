@@ -93,6 +93,57 @@ Expected output: `Cannot POST /hello` (Express.js default for unsupported method
 
 Navigate to `http://127.0.0.1:3000/hello` in your web browser. You should see the text "Hello world" displayed.
 
+## API Reference
+
+### GET /hello
+
+Returns a plain text "Hello world" response.
+
+**Request:**
+```
+GET /hello HTTP/1.1
+Host: 127.0.0.1:3000
+```
+
+**Response:**
+```
+HTTP/1.1 200 OK
+Content-Type: text/plain; charset=utf-8
+
+Hello world
+```
+
+**Status Codes:**
+- `200 OK` - Successful response
+- `405 Method Not Allowed` - Request method is not GET
+- `404 Not Found` - Requested path does not exist
+
+## Environment Variables
+
+| Variable | Description | Default | Example |
+|----------|-------------|---------|---------|
+| `PORT` | Port number for HTTP server | `3000` | `PORT=8080 node server.js` |
+
+**Setting Environment Variables:**
+
+**Unix/Linux/macOS:**
+```bash
+export PORT=8080
+node server.js
+```
+
+**Windows Command Prompt:**
+```cmd
+set PORT=8080
+node server.js
+```
+
+**Windows PowerShell:**
+```powershell
+$env:PORT=8080
+node server.js
+```
+
 ## Architecture
 
 ### Project Structure
@@ -192,3 +243,17 @@ MIT License - see LICENSE file for details
 ## Contributing
 
 This is a tutorial project for educational purposes. Feel free to fork and modify for your own learning!
+
+## Author & Acknowledgments
+
+**Purpose:** Educational tutorial project for learning Node.js HTTP server fundamentals.
+
+**Intended Audience:** Beginner developers new to Node.js server-side development.
+
+**Learning Objectives:**
+- Understand HTTP request/response cycle
+- Learn Node.js server creation and port binding
+- Practice proper error handling and status codes
+- Experience graceful shutdown patterns
+
+For questions, improvements, or feedback about this tutorial, please open an issue in the repository.
